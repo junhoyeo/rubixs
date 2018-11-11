@@ -1,6 +1,7 @@
 from cube import Cube
 
 A = Cube()
+print()
 A.print_cube()
 
 while(1):
