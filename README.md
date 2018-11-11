@@ -2,8 +2,7 @@
 Rubix cube with Python3
 
 ## U, U', U2
-<img alt="U" src="./assets/U.png" height="450">
-<img alt="U'" src="./assets/U'.png" height="450">
+<img alt="U" src="./assets/U.png" height="450"><img alt="U'" src="./assets/U'.png" height="450">
 
 ### U
 - `Cube.U(clockwise=True)`
@@ -20,8 +19,7 @@ Rubix cube with Python3
 - `U2` command in program
 
 ## D
-<img alt="D" src="./assets/D.png" width="300" height="450">
-<img alt="D'" src="./assets/D'.png" width="300" height="450">
+<img alt="D" src="./assets/D.png" width="300" height="450"><img alt="D'" src="./assets/D'.png" width="300" height="450">
 
 ### D
 - `Cube.D(clockwise=True)`
