@@ -9,5 +9,8 @@ while(1):
     if c == 'U':  
         A.U()
         A.print_cube()
-    elif c == 'quit' or c == 'exit':
+    elif c in ['U\'', 'U`']:
+        A.U(clockwise=False)
+        A.print_cube()
+    elif c in ['quit', 'exit']:
         break
