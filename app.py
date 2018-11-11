@@ -12,11 +12,21 @@ while(1):
     elif c in ['U\'', 'U`']:
         A.U(clockwise=False)
         A.print_cube()
+    elif c == 'U2':
+        A.U()
+        A.U()
+        A.print_cube()
     elif c == 'D':
         A.D()
         A.print_cube()
     elif c in ['D\'', 'D`']:
         A.D(clockwise=False)
+        A.print_cube()
+    elif c == 'D2':
+        A.D()
+        A.D()
+        A.print_cube()
+    elif c.lower() == 'print':
         A.print_cube()
     elif c.lower() in ['quit', 'exit']:
         break
