@@ -1,6 +1,7 @@
 class Cube:
     def __init__(self):
         self.cube = [[[i, i, i] for j in range(3)] for i in range(6)]
+        # self.cube[5][2][0] = 1 # for testing rotation
         # self.cube[0][2][0] = 1 # for testing rotation
 
     def print_block(self, color):
@@ -45,6 +46,21 @@ class Cube:
         else: # rotate counterclockwise
             top = [list(i) for i in list(map(list, reversed(list(zip(*self.cube[0])))))]      
         self.cube[0] = top
+
+    def D(self, clockwise=True):
+        # counterclockwise if clockwise=False
+        shift = -1 if not clockwise else 1
+        # rotate the sides
+        side = [face[2] for face in self.cube[1:5]]
+        side = side[shift:] + side[:shift]
+        for idx, face in enumerate(self.cube[1:5]):
+            face[2] = side[idx]
+        # rotate the bottom
+        if clockwise:
+            bot = [list(i) for i in list(map(list, reversed(list(zip(*self.cube[5])))))]
+        else: # rotate counterclockwise
+            bot = [list(i) for i in list(zip(*self.cube[5][::-1]))]   
+        self.cube[5] = bot
 
 if __name__ == '__main__':
     pass
