@@ -26,7 +26,17 @@ while(1):
         A.D()
         A.D()
         A.print_cube()
+    elif c == 'F':
+        A.F()
+        A.print_cube()
+    elif c == 'F2':
+        A.F()
+        A.F()
+        A.print_cube()
     elif c.lower() == 'print':
+        A.print_cube()
+    elif c.lower() == 'init':
+        A.cube = [[[i, i, i] for j in range(3)] for i in range(6)]
         A.print_cube()
     elif c.lower() in ['quit', 'exit']:
         break

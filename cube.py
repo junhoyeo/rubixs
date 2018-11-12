@@ -62,5 +62,34 @@ class Cube:
             bot = [list(i) for i in list(zip(*self.cube[5][::-1]))]   
         self.cube[5] = bot
 
+    def F(self, clockwise=True):
+        w = self.cube[0][2]
+        r = [self.cube[1][i][2] for i in range(2, -1, -1)]
+        p = [self.cube[3][i][0] for i in range(2, -1, -1)]
+        y = self.cube[5][0]
+        self.cube[0][2] = r
+        for idx in range(3):
+            self.cube[1][idx][2] = y[idx]
+            self.cube[3][idx][0] = w[idx]
+        self.cube[5][0] = p
+        front = [list(i) for i in list(zip(*self.cube[2][::-1]))]
+        self.cube[2] = front
+    
+    def B(self, clockwise=True):
+        pass
+
+    def R(self, clockwise=True):
+        pass
+    
+    def L(self, clockwise=True):
+        pass
+
 if __name__ == '__main__':
-    pass
+    A = Cube()
+    A.print_cube()
+    print()
+    # A.U()
+    # A.print_cube()
+    print()
+    A.F()
+    A.print_cube()
