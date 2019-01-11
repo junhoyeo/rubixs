@@ -18,7 +18,7 @@ Rubix cube with Python3
 - Call `U` twice
 - `U2` command in program
 
-## D
+## D, D', D2
 <img alt="D" src="./assets/D.png" width="300" height="450"><img alt="D'" src="./assets/D'.png" width="300" height="450">
 
 ### D

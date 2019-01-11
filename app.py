@@ -6,7 +6,7 @@ A.print_cube()
 
 while(1):
     c = input('>>> ')
-    if c == 'U':  
+    if c == 'U':
         A.U()
         A.print_cube()
     elif c in ['U\'', 'U`']:
@@ -28,6 +28,9 @@ while(1):
         A.print_cube()
     elif c == 'F':
         A.F()
+        A.print_cube()
+    elif c in ['F\'', 'F`']:
+        A.F(clockwise=False)
         A.print_cube()
     elif c == 'F2':
         A.F()
